@@ -1,0 +1,21 @@
+<div class="well">
+  <form class="form-horizontal" name="gitform" #FormGit (ngSubmit)="GetGitInfo(USER)">
+    <label>Enter User Name.</label>
+    <input type="text" name="User_Name" #USER required>
+    <button>Search Info</button>
+  </form>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <th>Name</th>
+      <th>ID</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{data.login}}</td>
+        <td>{{data.id}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
