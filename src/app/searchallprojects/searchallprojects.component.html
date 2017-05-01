@@ -1,0 +1,33 @@
+<div class="well">
+  <form class="form-horizontal" name="gitform" #FormGit = 'ngForm' (ngSubmit)="OnClickGitRepo(USER)">
+    <label>Enter Project Name.</label>
+    <input type="text" name="User_Name" required #USER>
+    <button>Submit</button>
+  </form>
+</div>
+<div *ngIf = "FormGit.submitted">
+  <small> Projects = {{tot}}</small><br>
+  <small> Top 30 results. </small>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Project Name
+      </th>
+      <th>
+        Avatar Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of Listproject">
+      <td>
+        <a href="{{item.html_url}}" target="_blank">{{item.name}}</a>
+      </td>
+      <td>
+        <a href="{{item.owner.html_url}}" target="_blank">{{item.owner.login}}</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

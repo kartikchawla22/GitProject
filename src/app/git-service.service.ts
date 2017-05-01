@@ -5,9 +5,9 @@ import 'rxjs/RX';
 @Injectable()
 export class GitServiceService {
 Url = "https://api.github.com/users/";
+Url2 = "https://api.github.com/search/repositories?q="
 data=[];
 Repos = [];
-count = 0;
   constructor( public GitHttp : Http) { }
 getUserData(Name1): Observable<any>{
 return this.GitHttp.get(this.Url+Name1).map(
@@ -18,6 +18,13 @@ return this.GitHttp.get(this.Url+Name1).map(
 GetUserRepo(Name1): Observable<any>{
  return this.GitHttp.get(this.Url+Name1+"/repos").map(
    Repos=>Repos.json());
+
+}
+
+getAllRepo(Name1): Observable<any>{
+return this.GitHttp.get(this.Url2+Name1).map(
+  data => data.json()
+);
 
 }
 }

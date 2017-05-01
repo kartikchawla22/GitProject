@@ -8,16 +8,19 @@ import { AppComponent } from './app.component';
 import { GitinfoComponent } from './gitinfo/gitinfo.component';
 import { GitServiceService  } from './git-service.service';
 import { SearchGitComponent } from './search-git/search-git.component';
+import { SearchallprojectsComponent } from './searchallprojects/searchallprojects.component';
 const All = [
 {path: "gitinfo", component:GitinfoComponent},
-{path: "search-git", component:SearchGitComponent}
+{path: "search-git", component:SearchGitComponent},
+{path:'searchallprojects', component:SearchallprojectsComponent}
 
 ];
 @NgModule({
   declarations: [
     AppComponent,
     GitinfoComponent,
-    SearchGitComponent
+    SearchGitComponent,
+    SearchallprojectsComponent
   ],
   imports: [
     BrowserModule,
