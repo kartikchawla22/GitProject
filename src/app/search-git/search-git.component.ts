@@ -26,7 +26,6 @@ export class SearchGitComponent implements OnInit {
       this.list = res;
       this.err = false;
       // console.log(this.list);
-
     }
       , errorr => {
         alert('name Not Found.')

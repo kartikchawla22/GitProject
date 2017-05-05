@@ -1,0 +1,13 @@
+<div class="container">
+  <form (ngSubmit)="PostInMongo(MongoForm)" #MongoForm = 'ngForm' >
+    <label>Username</label>
+    <input type="text" name="username" [(ngModel)] = "Name" #user = "ngModel">
+    <label>LastName</label>
+    <input type="text" name="lastname" [(ngModel)]= "Last" #last = "ngModel">
+    <label>age</label>
+    <input type="text" name="age"  [(ngModel)]="age" #Age = "ngModel" >
+    <label>roll number</label>
+    <input type="text" name="roll_no" [(ngModel)]= "roll_no" #ph = "ngModel">
+    <button>Submit</button>
+  </form>
+</div>

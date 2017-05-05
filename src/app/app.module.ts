@@ -9,10 +9,15 @@ import { GitinfoComponent } from './gitinfo/gitinfo.component';
 import { GitServiceService  } from './git-service.service';
 import { SearchGitComponent } from './search-git/search-git.component';
 import { SearchallprojectsComponent } from './searchallprojects/searchallprojects.component';
+import { SearchmongoComponent } from './searchmongo/searchmongo.component';
+import { PostmongoComponent } from './postmongo/postmongo.component';
+import { MongoregexComponent } from './mongoregex/mongoregex.component';
 const All = [
 {path: "gitinfo", component:GitinfoComponent},
 {path: "search-git", component:SearchGitComponent},
-{path:'searchallprojects', component:SearchallprojectsComponent}
+{path:'searchallprojects', component:SearchallprojectsComponent},
+{path:'searchmongo', component:SearchmongoComponent},
+{path:'postmongo', component:PostmongoComponent}
 
 ];
 @NgModule({
@@ -20,7 +25,10 @@ const All = [
     AppComponent,
     GitinfoComponent,
     SearchGitComponent,
-    SearchallprojectsComponent
+    SearchallprojectsComponent,
+    SearchmongoComponent,
+    PostmongoComponent,
+    MongoregexComponent
   ],
   imports: [
     BrowserModule,
